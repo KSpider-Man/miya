@@ -1,0 +1,545 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+img {
+	/* display: block; */
+	border: none;
+}
+.shopstore:hover .lists{
+	display: block;
+}
+
+.big_box {
+	/* position: relative; */
+	width: 1100px;
+	height: 595px;
+	background:#fff;
+	margin: 0px auto;
+}
+
+.songti a{
+	font-size: 12px;
+	color: #666;
+}
+
+.songti {
+	font-family: \5B8B\4F53;
+	line-height: 50px;
+}
+
+#box {
+	position: absolute;
+	width: 400px;
+	border: 1px solid #000;
+
+}
+
+#middle_box {
+	width: 400px;
+	height: 400px;
+}
+
+#middle_img {
+	width: 400px;
+	height: 400px;
+}
+
+#shadow {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	background: #fff;
+	display: none;
+	opacity: 0.5;
+	cursor: move;
+
+}
+
+#large_box {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	left: 401px;
+	top: -1px;
+	border: 1px solid #000;
+	overflow: hidden;
+	display: none;
+}
+
+#large_img {
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	z-index: 100;
+}
+
+#small-box {
+	position: absolute;
+	left: 0;
+	bottom: -70px;
+}
+
+#small-box img {
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-left: 15px;
+}
+
+.current {
+	box-shadow: red 0.5px 0.5px 0.5px 1px;
+
+}
+
+
+.rightgroup{
+	width:600px;
+	height:545px;
+	background:#fff;
+	float: right;
+}
+.logo_cun {
+    width: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.baoyou {
+    color: #ff3b93;
+	font-size:14px;
+}
+.brand{
+	margin: 10px 0;
+}
+.p_txt2{
+	color: #666;
+	width: auto;
+    font-size: 14px;
+    line-height: 20px;
+}
+.pi_price_box {
+    background: #fff9fd;
+    padding: 10px 15px;
+}
+.pi_price_box {
+    padding: 23px 0 13px;
+    position: relative;
+}
+.tit_txt {
+    font-size: 16px;
+    color: #666;
+    margin-right: 30px;
+}
+.yahei {
+    font-family: \5FAE\8F6F\96C5\9ED1;
+}
+.pbox_price {
+    font-size: 22px;
+}
+.pbox_price {
+    display: inline-block;
+    font-size: 30px;
+    color: #f43499;
+}
+.pbox_yen {
+    font-size: 20px;
+}
+
+em, i {
+    font-style: normal;
+}
+.pbox_market {
+    padding: 0 20px 0 10px;
+    color: gray;
+}
+.fz14{
+	font-size: 14px;
+	color: #666;
+	padding-left:10px;
+}
+.jks{
+	color: #999;
+	cursor: pointer;
+	background: url(//img.miyabaobei.com/d1/p5/2016/07/04/06/87/0687eac3bbfba9529050d1f730a3774d197912014.png) no-repeat -3px center;
+	width:65px;
+	display: inline-block;
+	text-align: right;
+}
+.layer_shui {
+    padding: 10px 20px;
+    position: absolute;
+    top: 60px;
+    left: 357px;
+    background: #fff;
+    border: 1px solid #ccc;
+    visibility: hidden;
+    text-align: left;
+    line-height: 20px;
+    z-index: 10;
+}
+.jks:hover .layer_shui{
+	transition:top 0.8s ease ;
+	visibility: visible;
+	top:22px;
+}
+.coupon-item a.long {
+    width: 100px;
+    background-position: -100px 0;
+}
+.markwarp, .review_f i {
+    color: #ff3b93;
+}
+.markwarp {
+    line-height: 20px;
+    width: 350px;
+    margin-top: 3px;
+    margin-bottom: 12px;
+}
+.markwarp i {
+    display: inline-block;
+    height: 21px;
+    padding: 0 5px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    margin-right: 8px;
+}
+.mark-manzeng {
+    background-color: #fca43b;
+}
+.mark-tejia {
+    background-color: #fc6c80;
+}
+.coupon-item a.long:active {
+    background-position: -100px -40px;
+}
+.coupon-item a:active {
+    background-position: 0 -40px;
+    color: #fff;
+}
+.pi_attr_box {
+    min-height: auto;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+input {
+    font-size: 12px;
+    font-family: inherit;
+}
+.color, .color_list, .color_name {
+    vertical-align: middle;
+}
+.color {
+    overflow: hidden;
+    padding-top: 12px;
+}
+.pi_attr_box .tit_txt {
+    font-size: 16px;
+    width: auto;
+    padding-left: 15px;
+    width: 70px;
+    text-align: left;
+}	
+.sku_kind {
+    display: inline-block;
+    float: left;
+}
+.sku_choose {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    width: 475px;
+}
+.sku_choose .active {
+    border: 1px solid #ff3b93;
+}
+.sku_choose .item_list {
+    float: left;
+    /* border: 1px solid #b5b5b5; */
+    color: #333;
+    line-height: 1;
+    padding: 8px 10px;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.pi_attr_box .tit_txt {
+    font-size: 16px;
+    /* width: auto; */
+    padding-left: 15px;
+    width: 70px;
+    text-align: left;
+}
+.sku_kind {
+    display: inline-block;
+    float: left;
+}
+dd {
+    display: block;
+/*    margin-inline-start: 40px; */
+}
+.sku_choose .active::after {
+    content: "";
+    background: url('https://img.miyabaobei.com/d1/p6/2018/12/21/c6/94/c694cf964ccf6c10020badfde4058d3e620002812.png') no-repeat;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 17px;
+    height: 16px;
+    display: inline-block;
+    z-index: 22;
+}
+.color{
+    vertical-align: middle;
+	overflow: hidden;
+	padding-top: 12px;
+}
+.i_num {
+    padding: 16px 1px;
+    position: relative;
+    height: 30px;
+    margin: -9px 0;
+}
+.pi_attr_box .tit_txt {
+    font-size: 16px;
+    /* width: auto; */
+    padding-left: 15px;
+    width: 70px;
+    text-align: left;
+}
+.pi_attr_box dt {
+    float: left;
+    /* font-size: 12px;
+    width: 46px;
+    text-align: left; */
+    color: gray;
+    line-height: 25px;
+}
+.i_notice_msg {
+    position: absolute;
+    height: 26px;
+    line-height: 26px;
+    bottom: -26px;
+    right: 0;
+    padding-left: 20px;
+    color: #f43499;
+    background-position: -500px -250px;
+    display: none;
+}
+.num_box {
+    float: left;
+    position: relative;
+    height: 28px;
+    border: 1px solid #b3b3b3;
+}
+.num_reduce_disabled {
+    background-position: 0 -150px;
+    cursor: default;
+	background: url(../images/minus.gif) no-repeat 10px 10px;
+}
+.num_reduce {
+    float: left;
+    width: 24px;
+    height: 28px;
+}
+.num_input {
+    text-align: center;
+    line-height: 28px;
+    width: 28px;
+	height:28px;
+	float: left;
+    background-color: #fff;
+}
+.num_add {
+    background-position: -50px -150px;
+    cursor: pointer;
+	float: left;
+	width: 24px;
+	height: 28px;
+	background: url(../images/plus.gif) no-repeat 10px 10px;
+}
+#stockTips {
+    display: none;
+}
+.num_msg {
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #858585;
+}
+.num_msg span {
+    color: #f43499;
+}
+.button_f {
+    height: 55px;
+    width: 225px;
+    font-size: 18px;
+	float: left;
+	padding: 2px 12px 5px 0;
+	position: relative;
+}
+#J_cartAdd_submit{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    line-height: 55px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+	text-align: center;
+}
+#J_cartAdd_submit {
+    background-color: #F450A2;
+    border-radius: 2px;
+    display: inline-block;
+	padding: 0;
+	font-weight: normal;
+	font-size:18px;
+}
+#sepcailNotice {
+    color: #F450A2;
+    display: none;
+    margin-top: 8px;
+}
+.btn_07_f {
+    height: 55px;
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    font-weight: normal;
+	display: block;
+	width:100px;
+	text-align: center;
+	border-radius: 2px;
+}
+.mia_icons {
+    width: 100px;
+    height: 18px;
+    background:url(//img.miyabaobei.com/d1/p4/2016/07/01/6d/3a/6d3a6f4e046c7e9a42d62a49b2c0dd8a545526263.png) no-repeat center;
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+}
+.btn_07_f span {
+    position: absolute;
+    bottom:5px;
+    left: 45px;
+}
+.hide{
+	display: none;
+}
+.buttons_groupon .button_g {
+    float: left;
+    margin-right: 32px;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+}
+.button_g {
+    position: relative;
+}
+.buttons_groupon #J_cartAdd_submit {
+    margin: 0;
+    width: 218px;
+    height: 72px;
+    border: 2px solid #ff4a49;
+    background-color: #fff;
+    color: #ff4a49;
+    line-height: 1.4;
+    border-radius: 3px;
+	color: #FF4A49;
+	line-height: 1.4;
+}
+/* .buttons_groupon .button_g p {
+    padding-top: 8px;
+    font-size: 22px;
+} */
+#sepcailNotice {
+    color: #F450A2;
+    display: none;
+    margin-top: 8px;
+}
+.buttons_groupon .button_g p {
+    padding-top: 8px;
+    font-size: 18px;
+	float: left;
+	margin-right: 32px;
+	line-height: 1.4;
+	text-align: center;
+}
+#grouponBtn {
+    display: block;
+    width: 218px;
+    height: 72px;
+    border: 2px solid #ff4a49;
+    background-color: #ff4a49;
+    color: #fff;
+    border-radius: 3px;
+}
+.buttons_groupon .button_g p {
+    padding-top: 8px;
+    font-size: 22px;
+}
+.pop-code {
+    display: none;
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    border: 1px solid #E1E4EA;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.04);
+    padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    width: 140px;
+    background-color: #fff;
+    z-index: 100;
+}
+.pop-code .close {
+    font-size: 18px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 21px;
+    text-align: center;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #6a6a6a;
+    border-radius: 24px;
+    color: #fff;
+}
+buttons_groupon #itemAttention {
+    width: 68px;
+    padding: 0;
+}
+.buttons_groupon .button_f {
+    height: auto;
+}
+.other {
+    overflow: hidden;
+    padding: 3px 0 15px;
+}
+.pi_atrr_box dt{
+	float: left;
+	font-size:12px;
+	width:46px;
+	text-align: left;
+	color: #gray;
+	line-height: 25px;
+}
+.other_box{
+	float: left;
+	height: 25px;
+	text-align: right;
+	line-height:25px;
+	font-size:12px;
+	color: gray;
+}

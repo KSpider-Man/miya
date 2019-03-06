@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/Login.css" />
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="loginWrap">
+			<a href="https://itunes.apple.com/cn/app/mi-ya-bao-bei-zhong-guo-zui/id973366293?mt=8" title="iPhone系列手机及ipad适用"
+			 target="_blank" style="display:block;left:263px;top:324px;width:136px;height:36px;position:absolute"></a>
+			<a href="https://download.miyabaobei.com/Miababy_localhost_V7.5.1.apk" target="_blank" title="三星小米索尼华为等android手机适用"
+			 style="display:block;left:263px;top:372px;width:136px;height:36px;position:absolute"></a>
+			<div class="Login_logo">
+				<a href="#"><img src="images/mia-logo.png" </a>
+			</div> 
+			<div class="loginBord">
+					<div class="loginTit">
+						<span class="l yahei pink">快捷登录</span>
+					</div>
+					<form method="" action="post" name="frm">
+						<div>
+							<label>用户名：</label>
+							<input type="text" id="username" class="inputText" placeholder="请输入您的用户名"  autofocus="autofocus"/>
+							
+						</div>
+						<div>
+							<label>输入密码：</label>
+							<input type="password" id="password" class="inputText" placeholder="请输入您的密码" />
+						</div>
+					</form>
+					<div class="third_login">
+						<p>使用以下账号登录：</p>
+						<a class="login_wx" data-tag="weixin" href="jvascript:;" title="使用微信帐号登录"></a>
+						<a class="login_sina" data-tag="weibo" href="jvascript:;" title="使用新浪微博帐号登录"></a>
+					</div>
+					<p class="loginButton">
+						<a id="login_submit" class="loginbtn">一键登录</a>
+					</p>
+			</div>
+		</div>
+		<div class="simpleVersionFooter  gray2">
+			Copyright ©2019 北京花旺在线商贸有限公司 Miyabaobei.com 保留一切权利。客服热线： 010-10108088。沪ICP备16004431号-2
+			<br>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+						$("#login_submit").on("click", function() {
+		
+								//注册接口
+								$.post("http://47.104.244.134:8080/userlogin.do", 
+								{
+										"name": $("#username").val(),
+										"password": "987456"},
+										function(data){
+											console.log(data);	
+									window.location.href="http://127.0.0.1:8848/miya/index.html";
+								});
+							})
+					
+			})
+		</script>
+	</body>
+</html>

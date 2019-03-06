@@ -1,0 +1,182 @@
+body {
+	font-size: 12px;
+	font-family: verdana, geneva, sans-serif;
+}
+
+.left a:hover {
+	color: #F94487;
+}
+
+.plus {
+	list-style-image: url(../images/plus.gif);
+}
+
+/* .minus {
+	list-style-image: url(../images/minus.gif);
+} */
+
+.warp {
+	padding-bottom: 20px;
+}
+
+.w1004 {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.helptitle {
+	padding: 20px 0;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.helptitle h3 {
+	padding-right: 10px;
+	font-weight: 400;
+}
+
+.yahei {
+	font-family: \5FAE\8F6F\96C5\9ED1;
+}
+
+.f20 {
+	font-size: 20px;
+}
+
+.pink {
+	color: #f450a2;
+}
+
+.l {
+	float: left;
+}
+
+.helptitle span {
+	float: left;
+	padding-top: 10px;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.ic {
+	padding-bottom: 20px;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.ic .left {
+	border: 1px solid #dadada;
+	width: 148px;
+	background: #fff;
+	border-top: 0;
+}
+
+.ic .left .title {
+	height: 32px;
+	background: #e8e8e8;
+	line-height: 30px;
+	padding-left: 10px;
+	color: #000;
+	font-weight: 700;
+	font-size: 13px;
+	border-top: 1px solid #dadada;
+	border-bottom: 1px solid #dadada;
+}
+
+.myhelp .ic .left ul {
+	padding: 10px 10px;
+}
+
+.myhelp .ic .left li {
+	height: auto;
+}
+
+.ic .left li {
+	line-height: 24px;
+}
+
+.myhelp .clix {
+	height: 26px;
+}
+
+
+.unfold {
+	background-position: -150px 0;
+}
+
+.fold {
+	background: url(../images/minus.gif) no-repeat scroll 0px 1px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	display: inline-block;
+	height: 9px;
+	margin-right: 7px;
+	overflow: hidden;
+	width: 9px;
+}
+
+.blod {
+	font-weight: 700;
+}
+
+.myhelp .ic .left li ul {
+	padding: 2px 10px 10px 16px;
+	border-top: 1px dashed #e6e6e6;
+	margin-top: 5px;
+}
+
+.ic .left li .current a {
+	font-weight: 700;
+	color: #c71585;
+}
+
+.myhelp .ic .left ul {
+	padding: 10px 10px;
+}
+
+.ic .right {
+	width: 830px;
+	margin-left: 20px;
+}
+
+.myhelp .ic .right .title {
+	padding: 15px;
+	border-width: 1px;
+}
+
+.ic .right .title {
+	border: 1px solid #e6e6e6;
+	border-bottom: 2px solid #f450a2;
+	background: #fff;
+	overflow: hidden;
+	zoom: 1
+}
+
+.ic .right .hint {
+	padding: 15px 20px 20px 20px;
+	border: 1px solid #e6e6e6;
+	background: #fff;
+}
+
+.ic .right .myohelp {
+	width: 748px;
+	margin: 0 auto;
+}
+
+ic .right .hint h3,
+.ic .right .hint p {
+	padding: 6px 0;
+	line-height: 22px;
+	font-family: 'Microsoft YaHei UI';
+	font-size: 13px;
+	font-style: normal;
+}

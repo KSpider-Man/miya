@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>放大镜详情页</title>
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="dist/js/big_photo.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/search.css" />
+		<link rel="stylesheet" type="text/css" href="css/banner.css" />
+		<link rel="stylesheet" href="font/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/jd.css" />
+		<link rel="stylesheet" type="text/css" href="css/newbox.css" />
+		<!--  -->
+	</head>
+	<body>
+		<div class="header">
+			<!-- 登陆注册 -->
+			<div class="header-top">
+				<div class="mia-iphone">
+					<a href=""><span class="iconfont">&#xe6aa;</span>手机蜜芽</a>
+				</div>
+				<div class="nihao">你好，欢迎来到蜜芽!</div>
+				<div class="mia-Login">
+					<a href="Login.html">登录</a>
+				</div>
+				<span class="mia-line">|</span>
+				<div class="mia-register">
+					<a href="">免费注册</a>
+				</div>
+				<div class="mia-help">
+					<a href="help.html">帮助中心</a>
+				</div>
+			</div>
+		</div>
+		<!-- 搜索框 -->
+		<div class="header-func">
+			<div class="header-clearfix">
+				<div class="mia-logo">
+					<img src="images/mia-logo.png" />
+				</div>
+				<div class="func-search" style="overflow: hidden;">
+					<input type="text" name="txt" id="txt" value="" />
+					<input type="button" name="btn" id="btn" value="搜 索" />
+				</div>
+				<ul id="list"></ul>
+				<div class="func-cart">
+					<a class="cart-item" href="cart.html">
+						<span class="iconfont">&#xe506;</span>
+						购物车
+						<!-- <em style="display: none;" id="cart_num">0</em> -->
+						<div class="cart-more" id="shop_cart">
+							<p class="empty">购物车还没有商品，快去选购吧！</p>
+						</div>
+				</div>
+			</div>
+		</div>
+		<!-- 导航 -->
+		<div class="header-nav">
+			<ul class="header-ul">
+				<li class="shopstore">全部商品分类</li>
+				<li><a href="index.html">首页</a></li>
+				<li><a target="_blank" href="">纸尿裤</a></li>
+				<li><a target="_blank" target="_blank" target="_blank" href="">奶粉</a></li>
+				<li class="nav-guarantee">
+					<a target="_blank" href="/guarantee">正品保证<span class="iconfont">&#xe625;</span>
+					</a>
+					<div class="list-option">
+						<a target="_blank" href="/guarantee"><span>正品保证</span></a>
+						<a target="_blank" href="/help-22.html"><span>退货政策</span></a>
+						<a target="_blank" href="/help.html"><span>帮助中心</span></a>
+					</div>
+				</li>
+				<li><a target="_blank" href="">早教音乐</a></li>
+			</ul>
+			<ul class="lists" style="display:none;">
+			</ul>
+		</div>
+		<!--  -->
+		<div class="big_box">
+			<div class="songti">
+				<a href="index.html">蜜芽首页</a> &gt;
+				<a target="_blank" href="https://www.miyabaobei.hk/s/cat.html" title="分类：睡眠免洗面膜"> 睡眠免洗面膜 </a>&gt;
+				【包税】夜间修护睡眠面膜70ml
+			</div>
+
+			<div id="box">
+				<!-- 原图区域和遮挡块 -->
+				<div id="middle_box">
+					<img src="img/middle-1.jpg" id="middle_img" />
+					<div id="shadow"></div><!-- 遮挡块好的yes -->
+				</div>
+
+				<!-- 右侧放大区域 -->
+				<div id="large_box">
+					<img src="img/large-1.jpg" id="large_img" />
+				</div>
+
+
+				<!-- 下方缩略图 -->
+				<div id="small-box">
+					<img src="img/small-1.jpg" class="current" />
+					<img src="img/small-2.jpg" />
+					<img src="img/small-3.jpg" />
+					<img src="img/small-4.jpg" />
+					<img src="img/small-5.jpg" />
+				</div>
+			</div>
+
+			<div class="rightgroup">
+				<img src="img/hanguo.png" alt="" class="logo_cun">
+				<p class="p_txt" style="display: inline; color:#666; font-size:12px">韩国品牌|香港首发</p>
+				<div class="brand"><a href="" class="baoyou">[包邮包税]</a><a href="" style="color:#666;font-size:14px;padding-left:10px;">兰芝
+						LANEIGE</a> 【包税】夜间修护睡眠面膜70ml</div>
+				<p class="p_txt2">相信很多妹子都接触过这款面膜，此品牌当家花旦，果冻一般的质地，味道清淡，睡前一大坨一觉醒来会发现皮肤棒棒哒，水水嫩嫩看上去元气实足，连上上妆都更服帖，此款面膜适合任何肤质</p>
+				<!-- <div class="sell">
+					<div class="price_info"><span class="tit_txt yahei">售价</span><span class="pbox_price"><i class="pbox_yen">¥</i><em
+							 id="item_price">125.00</em></span><span class="pbox_market"><span>¥</span> <del id="mprice" class="fz14">399.00</del></span><span
+						 class="jks">进口税<span class="layer_shui">如产生税费，请与蜜芽在线客服联系</span></span>
+					</div>
+				</div> -->
+				<div class="pi_price_box">
+					<div class="price_info"><span class="tit_txt yahei">售价</span><span class="pbox_price"><i class="pbox_yen">¥</i><em
+							 id="item_price">125.00</em></span><span class="pbox_market"><span>¥</span> <del id="mprice" class="fz14">399.00</del></span><span
+						 class="jks">进口税<span class="layer_shui">如产生税费，请与蜜芽在线客服联系</span></span></div>
+					<div id="i_youhui_bak" class="i_youhui clearfix">
+						<dt class="num_name tit_txt yahei" style="float:left;">优惠</dt>
+						<dt class="num_txt" style="float:left;"><a href="/promotion-80885.html">
+								<div class="markwarp"><i class="mark-manzeng">限时秒杀</i>每人限购5件,总限购200件,超出按照原价计算</div>
+							</a><a href="/promotion-81045.html">
+								<div class="markwarp"><i class="mark-tejia">直降</i>爆款限时特价</div>
+							</a></dt>
+					</div>
+					<style>
+						.coupon-block{display:none;}
+						.coupon-block .kong{width: 60px;display: inline-block;height: 100%;float:left;height: 2px;}
+						.coupon-list{float: left;}
+						.coupon-list .coupon-mark{display:inline-block;height: 21px;line-height:21px;text-align: center;background: #fc6c80;color: #fff;float:left;padding:0 5px;}
+						.coupon-item{float: left;width: 320px;height: 21px;overflow:hidden;}
+						.coupon-item a,.coupon-list .shrink{background: url(//img.miyabaobei.com/d1/p5/2016/12/16/61/ae/61aeebba9a05d68c404288e8502532e3677051927.png) no-repeat;}
+						.coupon-item a{display: inline-block;height: 24px;width:60px;background-position: 0 0;color: #ff3b93;line-height: 24px;text-align: center;margin-left: 8px;margin-bottom: 10px;}
+						.coupon-item a.long{width: 100px;background-position: -100px 0;}
+						.coupon-item a.active{background-position: 0 -40px;color: #fff;}
+						.coupon-item a.long.active{background-position: -100px -40px;}
+						.coupon-list .shrink{display: inline-block;height:21px;width: 21px;background-position: -206px 8px;float:left;cursor: pointer;}
+						.coupon-list .down{background-position: -206px -32px;}
+						.layer{width: 440px;height: 278px;background: #fff;border:4px solid #cecece;text-align: center;position: fixed;top: 50%;left: 50%;margin: -139px 0 0 -220px;z-index: 1111;display: none;}
+						.popup_mask{display:block;width:100%;height: 100%;background:rgba(0,0,0,0.3);z-index: 1110;position: fixed;top:0;left:0;right:0;bottom:0;display: none;}
+						.layer .img{height: 76px;width: 76px;margin: 20px auto;}
+						.layer .img img{width: 100%}
+						.close_mia_popup{display: block;position: absolute;width: 25px;height: 30px;top:2px;right:2px;}
+						.btn_coup {position: absolute;top: 130px; left:305px;width:390px; height:170px;cursor: pointer;}
+						.layer-tit{height: 31px;background: #f7f7f7;border-bottom: 1px solid #eaeaea;text-align: left;line-height: 31px;position: relative;}
+						.layer-tit h5{color:#666;font-weight: bold;font-size: 14px;text-indent: 14px;}
+						.layer p{font-size: 20px;color: #000;}
+						a.go-yhq{color: #fa4b9b;text-decoration: underline;padding: 5px 0;}
+						a.surebtn{display: block;height: 36px;line-height: 36px;width: 100px;background: #fa4b9b;color: #fff;font-weight: bold;text-align: center;margin: 20px auto 0 auto;}
+				</style>
+					<div class="coupon-block clearfix" style="display: block;">
+						<span class="kong"></span>
+						<div class="coupon-list clearfix">
+							<span class="coupon-mark">领券</span>
+							<div class="coupon-item">
+								<!--<a href="javascript:;" data-cup="code1">10元券</a><a href="javascript:;"  data-cup="code2">10元券</a><a class="long" href="javascript:;"  data-cup="code3">满199减100券</a><a href="javascript:;"  data-cup="code4">10元券</a><a href="javascript:;"  data-cup="code5">10元券</a>--><a
+								 href="javascript:;" class="long" data-cup="normal-190130-00735cd2eac948f6">满399减50券</a></div>
+							<span class="shrink up" style="display: none;"></span>
+						</div>
+					</div>
+					<div class="layer">
+						<div class="layer-tit">
+							<h5>领取优惠券成功</h5><a class="close_mia_popup" href="javascript:;"><img src="https://img.miyabaobei.com/d1/p5/2016/12/15/5b/43/5b436eb7e8b9c6234f52ad8dd272cc6c940445561.jpg"
+								 alt=""></a>
+						</div>
+						<div class="img"><img src="https://img.miyabaobei.com/d1/p5/2016/12/15/e2/ce/e2ce683f2fcebd40080f4399a29df4bd929226583.png"
+							 alt=""></div>
+						<p>领取成功，尽情买买买吧</p>
+						<a class="go-yhq" href="/my_coupon" target="_blank" title="">去我的优惠券查看&gt;</a>
+						<a class="surebtn" href="javascript:;">确定</a>
+					</div>
+					<div class="popup_mask"></div>
+					<script type="text/javascript">
+						$(function() {
+							$('.shrink').click(function() {
+								if ($(this).hasClass('up')) {
+									$(this).removeClass('up').addClass("down")
+									$(this).siblings('.coupon-item').css('height', 'auto');
+								} else {
+									$(this).removeClass('down').addClass("up")
+									$(this).siblings('.coupon-item').css('height', '21px');
+								}
+							});
+							// 	领券
+							$('.layer').on('click', '.surebtn,.close_mia_popup', function() {
+								$('.layer,.popup_mask').hide();
+							});
+						})
+					</script> <!-- 蜜豆抵扣 可抵扣时 pi_price_box 增加 pi_has_midou -->
+					<div id="midou_dikou" class="midou_dikou clearfix">
+						<dt class="num_name tit_txt yahei" style="float:left;"></dt>
+						<dt class="num_txt" style="float:left;"></dt>
+					</div>
+				</div>
+				
+				<div class="pi_attr_box">
+					<div class="clearfix discount_f"></div>
+					<input type="hidden" value="add" name="act">
+					<input type="hidden" value="" name="client_time">
+					<!-- 选择规格 -->
+					<div id="popupSkuArea" class="color">
+						<div class="sku_kind tit_txt">可选</div>
+						<div class="sku_choose" id="skuPop1"><span class="item_list active" no="1" data-text="70ml" dis="0">70ml</span></div>
+						<div class="sku_kind tit_txt">规格</div>
+						<div class="sku_choose" id="skuPop2"><span class="item_list active" no="2" data-text="70ml" dis="0">70ml</span></div>
+					</div>
+					<div id="popcomSkuArea" class="color"></div>
+					<!-- <dl id="detail_size" style="display:none;"></dl> -->
+					<!-- tese -->
+					<input type="hidden" value="" id="item_size" name="size" readonly="readonly">
+					<input type="hidden" value="" id="sku_id" readonly="readonly">
+					<dl id="J_num_select" class="i_num clearfix">
+						<dt class="num_name tit_txt fz14">数量</dt>
+						<dd class="i_notice_msg J_num_tips"></dd>
+						<dd class="num_box">
+							<span class="num_reduce num_reduce_disabled J_num_act_reduce"></span>
+							<em class="num_input" id="buyAmount">1</em>
+							<span class="num_add J_num_act_add"></span>
+						</dd>
+						<dd id="stockTips" class="num_msg f12">
+							还剩<span id="stock"></span>件
+						</dd>
+					</dl>
+				
+				
+					<!--预售商品提示-->
+				
+					<div class="clearfix cartAdd_submit hide" style="display: block;">
+						<div class="button_f" id="itemProcess">
+							<a href="javascript:void(0)" class="btn_07 fz14" id="J_cartAdd_submit">加入购物车</a>
+							<p id="sepcailNotice"></p>
+						</div>
+						<div class="button_f" id="itemAttention">
+							<a href="javascript:void(0)" class="btn_07_f fz14" id="attend_submit">
+								<i class="mia_icons"></i>
+								<span>收藏</span>
+							</a>
+							<p id="sepcailNotice1"></p>
+						</div>
+					</div>
+					<!--拼团商品-->
+					<div class="clearfix buttons_groupon hide">
+						<div class="button_g" id="itemProcess">
+							<a href="javascript:void(0)" class="btn_07 fz14 button_g Jg_cartAdd_submit" id="J_cartAdd_submit">
+								<p>¥129.00</p><span>单独购买</span>
+							</a>
+							<p id="sepcailNotice"></p>
+						</div>
+						<div class="button_g grouponCode">
+							<a href="javascript:;" class="J_groupon_code" id="grouponBtn">
+								<p>¥</p><span></span>人拼团
+							</a>
+							<div class="pop-code J_groupon_pop">
+								<a href="javascript:;" class="close J_groupon_code_close">x</a>
+								微信扫码参加拼团
+								<img src="/item/detail/m_code/2479556" width="100%" alt="">
+							</div>
+						</div>
+						<div class="button_f" id="itemAttention">
+							<a href="javascript:void(0)" class="btn_07_f fz14" id="attend_submit">
+								<i class="mia_icons"></i>
+								<span>收藏</span>
+							</a>
+							<p id="sepcailNotice1"></p>
+						</div>
+					</div>
+				
+					<dl class="other" style="padding-bottom:5px;">
+						<dt class="other_name">编码：</dt>
+						<dd class="other_box">2479556</dd>
+					</dl>
+				</div>
+			</div>
+			
+		</div>
+		<!--  -->
+		<!-- 尾部 -->
+		<div class="Nfooter">
+			<div class="Genuine">
+				<div class="w1100">
+					<a href="" rel="nofollow" target="_blank"><i class="icon-g1"></i><b>可信赖</b>进口母婴特卖</a>
+					<a href="" rel="nofollow" target="_blank"><i class="icon-g2"></i><b>无忧</b>正品保证</a>
+					<a href="" rel="nofollow" target="_blank"><i class="icon-g3"></i><b>7天</b>无理由退货</a>
+					<a href="" rel="nofollow" target="_blank"><i class="icon-g4"></i><b>恒温仓</b>完善的货物仓储</a>
+					<a href="" rel="nofollow" target="_blank"><i class="icon-g5"></i><b>24小时</b>快速发货</a>
+					<a href="" rel="nofollow" target="_blank"><i class="icon-g6"></i><b>100万</b>妈妈口碑信赖</a>
+				</div>
+			</div>
+			<div class="Nhelp">
+				<div class="w1000 clearfix">
+					<div class="r" style="margin-right: 40px;">
+						<ul class="EWM">
+							<li class="strong">关注蜜芽</li>
+							<li> <img src="https://img.miyabaobei.com/d1/p4/2016/11/15/3e/f6/3ef603e61e175352d66addb2b55722b2978255723.jpg"
+								 alt="手机蜜芽" />
+								<div class="right"> <a href="https://weibo.com/miyabaobei2014" target="_blank"><img src="https://file01.miyabaobei.com/resources/images/index_fd_wb.gif"
+										 alt="官方微博" /></a>
+									<div class="PubBtnHover"> <img src="https://file01.miyabaobei.com/resources/images/index_fd_wx.gif" alt="官方微信" />
+										<img src="https://img.miyabaobei.com/d1/p4/2016/11/15/f9/5d/f95d91315ebdb1f30c256c911c300dff979622189.png"
+										 class="wxmore" alt="" /> </div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="l" style="margin-left:15px;">
+						<ul>
+							<li class="strong">使用帮助</li>
+							<li><a href="" rel="nofollow">新手指南</a></li>
+							<li><a href="" rel="nofollow">会员体系</a></li>
+							<li><a href="" rel="nofollow">正品承诺</a></li>
+						</ul>
+						<ul>
+							<li class="strong">支付方式</li>
+							<li><a href="" rel="nofollow">支付方式</a></li>
+							<li><a href="" rel="nofollow">支付流程</a></li>
+							<li><a href="" rel="nofollow">跨境进口税</a></li>
+						</ul>
+						<ul>
+							<li class="strong">配送方式</li>
+							<li><a href="" rel="nofollow">包邮政策</a></li>
+							<li><a href="" rel="nofollow">发货时间</a></li>
+							<li><a href="" rel="nofollow">配送区域</a></li>
+							<li><a href="" rel="nofollow">验货签收</a></li>
+						</ul>
+						<ul>
+							<li class="strong">售后服务</li>
+							<li><a href="" rel="nofollow">退货政策</a></li>
+							<li><a href="" rel="nofollow">退货流程</a></li>
+							<li><a href="" rel="nofollow">退款方式</a></li>
+						</ul>
+						<ul class="NContact" style="width:200px;">
+							<li class="strong">联系方式</li>
+							<li>总裁邮箱 ceo@mia.com</li>
+							<li>商务合作 bd@mia.com</li>
+							<li>媒体合作 pr@mia.com</li>
+							<li>招商中心 zhaoshang@mia.com</li>
+							<li>企业采购 qiye@mia.com</li>
+							<li>廉政举报 jiancha@mia.com</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="Nlink">
+				<div class="w1000">
+					<p><a href="#" rel="nofollow">关于蜜芽</a> | <a href="#"
+						 rel="nofollow">加入蜜芽</a> | <a href="" rel="nofollow">商务合作</a> | <a href="#" rel="nofollow">帮助中心</a>
+						| <a href="" rel="nofollow">联系我们</a> | <a href="#" target="_blank">友情链接</a> | <a
+						 href="javascript:void(0)" id="backToMobile" target="_blank" rel="nofollow" data-domain="mia.com">触屏版</a> | <a
+						 href="#" target="_blank" rel="nofollow">媒体报道</a>|
+						<a href="#" target="_blank" rel="nofollow">营业执照</a> </p>
+					京公网安备：11010502027270 | 营业执照：91110105582599307U | 食品经营许可证：SP1101051410296669 | 出版物经营许可证：新出发京零字第朝160088号 <br />
+					沪ICP备16004431号-2 | 员工舞弊举报：jiancha@mia.com 电话：010-56733467<br />
+					Copyright &copy; 2019 北京花旺在线商贸有限公司 Mia.com 保留一切权利。<br />
+					<p class="cert">
+						<a href="#" target="_blank"><img style="height:33px;" src="//img.miyabaobei.com/d1/p5/2017/12/01/78/6d/786de03b6e7d22ca19e6476983315bc5109099620.jpg"
+							 alt=""></a>
+						<span style="display:inline-block;position:relative;width:auto;"><a style="display:inline-block;" kx_type="图标式"
+							 target="_blank" tabindex="-1" id="kx_verify" href="#"><img
+								 width="80" alt="可信网站" oncontextmenu="return false;" style="border:none;" src="https://img.miyabaobei.com/d1/p4/2016/11/15/45/28/4528ccca07835b01064270e69e08adc0943841428.png"></a></span>
+						<img width="105" src="https://file01.miyabaobei.com/resources/images/res/alipay.jpg">
+					</p>
+				</div>
+				<!-- 左右悬浮 -->
+				<div class="left_p">
+					<img src="images/right_p.png">
+				</div>
+				<div class="right_p">
+					<div class="list_right">
+						<ul class="hover">
+							<li class="side-cart"><a href="/cart"><span class="iconfont">&#xe506;</span>购物车</a></li>
+							<li class="side-mia">
+								<a href=""><span class="iconfont">&#xe62c;</span>咨询</a>
+							</li>
+							<li class="side-app">
+								<a href=""><span class="iconfont">&#xe63c;</span>微信</a>
+								<div class="item-float item-app"></div>
+							</li>
+						</ul>
+						<div class="side-top"><i></i></div>
+					</div>
+					<span class="ad">广告</span>
+				</div>
+
+				<script src="js/banner.js" type="text/javascript" charset="utf-8"></script>
+				<script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+				<script src="js/ad.js" type="text/javascript" charset="UTF-8"></script>
+				<script src="js/ad2.js" type="text/javascript" charset="UTF-8"></script>
+				<script src="js/index.js"></script>
+	</body>
+</html>

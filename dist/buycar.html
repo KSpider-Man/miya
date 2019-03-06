@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>商品列表页面</title>
+		<!--商品列表样式表-->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!--cookie操作的js库-->
+		<script src="js/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/search.css" />
+		<link rel="stylesheet" type="text/css" href="css/banner.css" />
+		<link rel="stylesheet" href="font/iconfont.css"/>
+		<!-- <link rel="stylesheet" type="text/css" href="css/jd.css" /> -->
+		<link rel="stylesheet" type="text/css" href="css/cart.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		
+	</head>
+	<body>
+			<body>
+			<div class="header">
+				<!-- 登陆注册 -->
+				<div class="header-top">
+					<div class="mia-iphone">
+						<a href=""><span class="iconfont">&#xe6aa;</span>手机蜜芽</a>
+					</div>
+					<div class="nihao">你好，欢迎来到蜜芽!</div>
+					<div class="mia-Login">
+						<a href="Login.html">登录</a>
+					</div>
+					<span class="mia-line">|</span>
+					<div class="mia-register">
+						<a href="register.html">免费注册</a>
+					</div>
+					<div class="mia-help">
+						<a href="help.html">帮助中心</a>
+					</div>
+				</div>
+			</div>
+			<!-- 搜索框 -->
+			<div class="header-func">
+				<div class="header-clearfix">
+					<div class="mia-logo">
+						<img src="images/mia-logo.png" />
+					</div>
+					<div class="func-search" style="overflow: hidden;">
+						<input type="text" name="txt" id="txt" value="" />
+						<input type="button" name="btn" id="btn" value="搜 索" />
+					</div>
+					<ul id="list"></ul>
+					<div class="func-cart">
+						<a class="cart-item" href="cart.html">
+							<span class="iconfont">&#xe506;</span>
+							购物车
+							<!-- <em style="display: none;" id="cart_num">0</em> -->
+							<div class="cart-more" id="shop_cart">
+								<p class="empty">购物车还没有商品，快去选购吧！</p>
+							</div>
+					</div>
+				</div>
+			</div>
+			<!-- 导航 -->
+			<div class="header-nav">
+				<ul class="header-ul">
+					<li class="shopstore">全部商品分类</li>
+					<li><a href="index.html">首页</a></li>
+					<li><a target="_blank" href="">纸尿裤</a></li>
+					<li><a target="_blank" target="_blank" target="_blank" href="">奶粉</a></li>
+					<li class="nav-guarantee">
+						<a target="_blank" href="/guarantee">正品保证<span class="iconfont">&#xe625;</span>
+						</a>
+						<div class="list-option">
+							<a target="_blank" href="/guarantee"><span>正品保证</span></a>
+							<a target="_blank" href="/help-22.html"><span>退货政策</span></a>
+							<a target="_blank" href="/help.html"><span>帮助中心</span></a>
+						</div>
+					</li>
+					<li><a target="_blank" href="">早教音乐</a></li>
+				</ul>
+				<ul class="lists" style="display: none;">
+				</ul>
+			</div>
+			<div class="bban" style="display: none;">
+				<!-- 轮播图 -->
+				<div class="pic" >
+					<img src="images/banner1.jpg" alt="banner1.jpg">
+					<img src="images/banner2.png" alt="banner2.png">
+				</div>
+		
+				<!-- 轮播图下的图标 -->
+				<div class="index-brand">
+					<h3>热卖品牌</h3>
+					<div class="brands">
+						<a href="#" target="_blank" title="">
+							<img src="images/icon1.jpg" alt="">
+						</a>
+						<a href="#" target="_blank" title="">
+							<img src="images/icon2.jpg" alt="">
+						</a>
+						<a href="#" target="_blank" title="">
+							<img src="images/icon3.jpg" alt="">
+						</a>
+						<a href="#" target="_blank" title="">
+							<img src="images/icon4.jpg" alt="">
+						</a>
+						<a href="#" target="_blank" title="">
+							<img src="images/icon5.jpg" alt="">
+						</a>
+						<a href="#" target="_blank" title="">
+							<img src="images/icon6.png" alt="">
+						</a>
+					</div>
+					<i></i>
+				</div>
+			</div>
+			<div id="list_shop">
+				
+			</div>
+<!-- 		<div class="container">
+			<h1>商品列表</h1>
+			<div class="mycar">
+				<a href="cart.html">我的购物车</a><i id="ccount">0</i>
+			</div>
+			<div class="list">
+				<dl id="1001">
+					<dt>
+						<img src="images/p1.jpg" />
+					</dt>
+					<dd>小米(MI)充电宝</dd>
+					<dd>10000毫安 新移动电源2 /充电宝 双向快充 超薄小巧便携 银色（新版）</dd>
+					<dd>￥<span>79</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+				<dl id="1002">
+					<dt>
+						<img src="images/p2.jpg" />
+					</dt>
+					<dd>小米无线充电器</dd>
+					<dd>小米（MI）（通用快充版）快速充电 / 轻巧便携 / 智能安全</dd>
+					<dd>￥<span>1998</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+				<dl id="1003">
+					<dt>
+						<img src="images/p3.jpg" />
+					</dt>
+					<dd>小米圈铁耳机</dd>
+					<dd>小米（MI）降噪耳机Type-C版 黑色 双动圈动铁 入耳式 耳麦</dd>
+					<dd>￥<span>299</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+				<dl id="1004">
+					<dt>
+						<img src="images/p4.jpg" />
+					</dt>
+					<dd>小米8</dd>
+					<dd>全面屏游戏智能手机 6GB+64GB 黑色 全网通4G 双卡双待</dd>
+					<dd>￥<span>2299</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="list">
+				<dl id="1001">
+					<dt>
+						<img src="images/p1.jpg" />
+					</dt>
+					<dd>小米(MI)充电宝</dd>
+					<dd>10000毫安 新移动电源2 /充电宝 双向快充 超薄小巧便携 银色（新版）</dd>
+					<dd>￥<span>79</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+				<dl id="1002">
+					<dt>
+						<img src="images/p2.jpg" />
+					</dt>
+					<dd>小米无线充电器</dd>
+					<dd>小米（MI）（通用快充版）快速充电 / 轻巧便携 / 智能安全</dd>
+					<dd>￥<span>1998</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+				<dl id="1003">
+					<dt>
+						<img src="images/p3.jpg" />
+					</dt>
+					<dd>小米圈铁耳机</dd>
+					<dd>小米（MI）降噪耳机Type-C版 黑色 双动圈动铁 入耳式 耳麦</dd>
+					<dd>￥<span>299</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+				<dl id="1004">
+					<dt>
+						<img src="images/p4.jpg" />
+					</dt>
+					<dd>小米8</dd>
+					<dd>全面屏游戏智能手机 6GB+64GB 黑色 全网通4G 双卡双待</dd>
+					<dd>￥<span>2299</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="list">
+				<dl id="1001">
+					<dt>
+						<img src="images/p1.jpg" />
+					</dt>
+					<dd>小米(MI)充电宝</dd>
+					<dd>10000毫安 新移动电源2 /充电宝 双向快充 超薄小巧便携 银色（新版）</dd>
+					<dd>￥<span>79</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+				<dl id="1002">
+					<dt>
+						<img src="images/p2.jpg" />
+					</dt>
+					<dd>小米无线充电器</dd>
+					<dd>小米（MI）（通用快充版）快速充电 / 轻巧便携 / 智能安全</dd>
+					<dd>￥<span>1998</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+				<dl id="1003">
+					<dt>
+						<img src="images/p3.jpg" />
+					</dt>
+					<dd>小米圈铁耳机</dd>
+					<dd>小米（MI）降噪耳机Type-C版 黑色 双动圈动铁 入耳式 耳麦</dd>
+					<dd>￥<span>299</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+				<dl id="1004">
+					<dt>
+						<img src="images/p4.jpg" />
+					</dt>
+					<dd>小米8</dd>
+					<dd>全面屏游戏智能手机 6GB+64GB 黑色 全网通4G 双卡双待</dd>
+					<dd>￥<span>2299</span></dd>
+					<dd>
+						<button>添加购物车</button>
+					</dd>
+				</dl>
+			</div>
+		</div> -->
+			<div class="Nfooter">
+					<div class="Genuine">
+						<div class="w1100">
+							<a href="" rel="nofollow" target="_blank"><i class="icon-g1"></i><b>可信赖</b>进口母婴特卖</a>
+							<a href="" rel="nofollow" target="_blank"><i class="icon-g2"></i><b>无忧</b>正品保证</a>
+							<a href="" rel="nofollow" target="_blank"><i class="icon-g3"></i><b>7天</b>无理由退货</a>
+							<a href="" rel="nofollow" target="_blank"><i class="icon-g4"></i><b>恒温仓</b>完善的货物仓储</a>
+							<a href="" rel="nofollow" target="_blank"><i class="icon-g5"></i><b>24小时</b>快速发货</a>
+							<a href="" rel="nofollow" target="_blank"><i class="icon-g6"></i><b>100万</b>妈妈口碑信赖</a>
+						</div>
+					</div>
+					<div class="Nhelp">
+						<div class="w1000 clearfix">
+							<div class="r" style="margin-right: 40px;">
+								<ul class="EWM">
+									<li class="strong">关注蜜芽</li>
+									<li> <img src="https://img.miyabaobei.com/d1/p4/2016/11/15/3e/f6/3ef603e61e175352d66addb2b55722b2978255723.jpg"
+										 alt="手机蜜芽" />
+										<div class="right"> <a href="https://weibo.com/miyabaobei2014" target="_blank"><img src="https://file01.miyabaobei.com/resources/images/index_fd_wb.gif"
+												 alt="官方微博" /></a>
+											<div class="PubBtnHover"> <img src="https://file01.miyabaobei.com/resources/images/index_fd_wx.gif" alt="官方微信" />
+												<img src="https://img.miyabaobei.com/d1/p4/2016/11/15/f9/5d/f95d91315ebdb1f30c256c911c300dff979622189.png"
+												 class="wxmore" alt="" /> </div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="l" style="margin-left:15px;">
+								<ul>
+									<li class="strong">使用帮助</li>
+									<li><a href="" rel="nofollow">新手指南</a></li>
+									<li><a href="" rel="nofollow">会员体系</a></li>
+									<li><a href="" rel="nofollow">正品承诺</a></li>
+								</ul>
+								<ul>
+									<li class="strong">支付方式</li>
+									<li><a href="" rel="nofollow">支付方式</a></li>
+									<li><a href="" rel="nofollow">支付流程</a></li>
+									<li><a href="" rel="nofollow">跨境进口税</a></li>
+								</ul>
+								<ul>
+									<li class="strong">配送方式</li>
+									<li><a href="" rel="nofollow">包邮政策</a></li>
+									<li><a href="" rel="nofollow">发货时间</a></li>
+									<li><a href="" rel="nofollow">配送区域</a></li>
+									<li><a href="" rel="nofollow">验货签收</a></li>
+								</ul>
+								<ul>
+									<li class="strong">售后服务</li>
+									<li><a href="" rel="nofollow">退货政策</a></li>
+									<li><a href="" rel="nofollow">退货流程</a></li>
+									<li><a href="" rel="nofollow">退款方式</a></li>
+								</ul>
+								<ul class="NContact" style="width:200px;">
+									<li class="strong">联系方式</li>
+									<li>总裁邮箱 ceo@mia.com</li>
+									<li>商务合作 bd@mia.com</li>
+									<li>媒体合作 pr@mia.com</li>
+									<li>招商中心 zhaoshang@mia.com</li>
+									<li>企业采购 qiye@mia.com</li>
+									<li>廉政举报 jiancha@mia.com</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="Nlink">
+						<div class="w1000">
+							<p><a href="https://www.mia.com/help-34.html" rel="nofollow">关于蜜芽</a> | <a href="https://www.mia.com/help-2226.html"
+								 rel="nofollow">加入蜜芽</a> | <a href="" rel="nofollow">商务合作</a> | <a href="https://www.mia.com/help.html" rel="nofollow">帮助中心</a>
+								| <a href="" rel="nofollow">联系我们</a> | <a href="https://www.mia.com/help-1321.html" target="_blank">友情链接</a> | <a
+								 href="javascript:void(0)" id="backToMobile" target="_blank" rel="nofollow" data-domain="mia.com">触屏版</a> | <a
+								 href="https://www.mia.com/media.html" target="_blank" rel="nofollow">媒体报道</a>|
+								<a href="https://m.mia.com/special/module/index/32243/wap/" target="_blank" rel="nofollow">营业执照</a> </p>
+							京公网安备：11010502027270 | 营业执照：91110105582599307U | 食品经营许可证：SP1101051410296669 | 出版物经营许可证：新出发京零字第朝160088号 <br />
+							沪ICP备16004431号-2 | 员工舞弊举报：jiancha@mia.com 电话：010-56733467<br />
+							Copyright &copy; 2019 北京花旺在线商贸有限公司 Mia.com 保留一切权利。<br />
+							<p class="cert">
+								<a href="/help/consumption" target="_blank"><img style="height:33px;" src="//img.miyabaobei.com/d1/p5/2017/12/01/78/6d/786de03b6e7d22ca19e6476983315bc5109099620.jpg"
+									 alt=""></a>
+								<span style="display:inline-block;position:relative;width:auto;"><a style="display:inline-block;" kx_type="图标式"
+									 target="_blank" tabindex="-1" id="kx_verify" href="https://ss.knet.cn/verifyseal.dll?sn=e1410211101055522320bq000000&amp;ct=df&amp;a=1&amp;pa=0.9654322788119316"><img
+										 width="80" alt="可信网站" oncontextmenu="return false;" style="border:none;" src="https://img.miyabaobei.com/d1/p4/2016/11/15/45/28/4528ccca07835b01064270e69e08adc0943841428.png"></a></span>
+								<img width="105" src="https://file01.miyabaobei.com/resources/images/res/alipay.jpg">
+							</p>
+						</div>
+						<!-- 左右悬浮 -->
+						<div class="left_p">
+							<img src="images/right_p.png">
+						</div>
+						<div class="right_p">
+							<div class="list_right">
+								<ul class="hover">
+									<li class="side-cart"><a href="/cart"><span class="iconfont">&#xe506;</span>购物车</a></li>
+									<li class="side-mia">
+										<a href=""><span class="iconfont">&#xe62c;</span>咨询</a>
+									</li>
+									<li class="side-app">
+										<a href=""><span class="iconfont">&#xe63c;</span>微信</a>
+										<div class="item-float item-app"></div>
+									</li>
+								</ul>
+								<div class="side-top"><i></i></div>
+							</div>
+							<span class="ad">广告</span>
+						</div>
+					<!-- 	<script type="text/javascript">
+							$(function(){
+										$("#sub").on("click", function() {
+							
+												//注册接口
+												 $.post("http://47.104.244.134:8080/cartlist.do", 
+												 {
+														"username": $("#username").val(),
+														"password": $("#password").val(),
+														"email": $("#email").val(),
+														"sex": $('input:radio[name="sex"]').val()},
+														function(data){
+															console.log(data);
+														}); 
+						</script> -->
+						<script src="js/banner.js" type="text/javascript" charset="utf-8"></script>
+						<script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+						<script src="js/ad.js" type="text/javascript" charset="UTF-8"></script>
+						<script src="js/ad2.js" type="text/javascript" charset="UTF-8"></script>
+						<script src="js/jquery-1.11.3.min.js"></script>
+						<script src="js/index.js"></script>
+		<script type="text/javascript" src="js/server.js"></script>
+		<script type="text/javascript" src="js/list_table.js"></script>
+		<!--
+        	描述：本页面的js操作
+        -->
+		<!-- <script type="text/javascript" src="js/car.js"></script> -->
+	</body>
+
+</html>

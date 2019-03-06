@@ -1,0 +1,11 @@
+  .pic{
+   /* position: relative; */
+	 height:480px;
+	 overflow: hidden;
+  }
+  .pic img{
+    position: absolute;
+    width:100%;
+    height:480px;
+    display: none;
+  }
